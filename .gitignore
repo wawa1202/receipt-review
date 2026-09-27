@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+runtime/
+data/external/
+models/
+.env
+.env.*
+*.log
+.idea/
+.vscode/
+dist/
+build/
+*.zip
+# 保留最终报告；早期迭代仅留在本地。
+reports/smoke-20260927.json
+reports/smoke-20260927-r2.json

@@ -1,0 +1,266 @@
+{
+  "mode": "synthetic",
+  "documents": 1,
+  "normalization": "casefold-whitespace; decimal-2dp; date-DD/MM/YYYY-v1",
+  "field_accuracy": 0.75,
+  "document_accuracy": 0.0,
+  "coverage": 1.0,
+  "per_field": {
+    "company": 0.0,
+    "address": 1.0,
+    "date": 1.0,
+    "total": 1.0
+  },
+  "errors": [
+    {
+      "id": "demo",
+      "field": "company",
+      "expected": "DEMO MART",
+      "predicted": "DEMOMART"
+    }
+  ],
+  "created_at": "2026-09-27T09:33:12.820469+00:00",
+  "python": "3.12.7",
+  "extractor": "rules-v1",
+  "packages": {
+    "rapidocr-onnxruntime": "1.4.4",
+    "onnxruntime": "1.30.0",
+    "pillow": "12.3.0"
+  },
+  "scope": "one synthetic image; not a public benchmark",
+  "real_ocr_used": true,
+  "ocr_seconds_including_initialization": 2.5759,
+  "dedup_verified": true,
+  "review_history_verified": true,
+  "prediction": {
+    "fields": {
+      "company": {
+        "value": "DEMOMART",
+        "evidence": [
+          0
+        ],
+        "ocr_score": 0.9960770308971405,
+        "method": "top_text",
+        "warnings": [
+          "heuristic_company"
+        ]
+      },
+      "address": {
+        "value": "12 JALAN MAJU",
+        "evidence": [
+          1
+        ],
+        "ocr_score": 0.9667455141360943,
+        "method": "address_keywords",
+        "warnings": [
+          "heuristic_address"
+        ]
+      },
+      "date": {
+        "value": "2024-05-27",
+        "evidence": [
+          2
+        ],
+        "ocr_score": 0.9983959754308065,
+        "method": "date_pattern",
+        "warnings": []
+      },
+      "total": {
+        "value": "12.00",
+        "evidence": [
+          8,
+          9
+        ],
+        "ocr_score": 0.9995925664901734,
+        "method": "total_label",
+        "warnings": []
+      }
+    },
+    "lines": [
+      {
+        "id": 0,
+        "text": "DEMOMART",
+        "bbox": [
+          57.0,
+          54.0,
+          289.0,
+          88.0
+        ],
+        "score": 0.9960770308971405
+      },
+      {
+        "id": 1,
+        "text": "12 JALAN MAJU",
+        "bbox": [
+          56.0,
+          147.0,
+          343.0,
+          183.0
+        ],
+        "score": 0.9667455141360943
+      },
+      {
+        "id": 2,
+        "text": "Date:27/05/2024",
+        "bbox": [
+          56.0,
+          241.0,
+          349.0,
+          277.0
+        ],
+        "score": 0.9983959754308065
+      },
+      {
+        "id": 3,
+        "text": "Receipt:DEMO-001",
+        "bbox": [
+          56.0,
+          337.0,
+          393.0,
+          373.0
+        ],
+        "score": 0.9864522106945515
+      },
+      {
+        "id": 4,
+        "text": "Coffee",
+        "bbox": [
+          54.0,
+          427.0,
+          171.0,
+          469.0
+        ],
+        "score": 0.9998917678991953
+      },
+      {
+        "id": 5,
+        "text": "12.00",
+        "bbox": [
+          345.0,
+          428.0,
+          445.0,
+          467.0
+        ],
+        "score": 0.999959659576416
+      },
+      {
+        "id": 6,
+        "text": "SUBTOTAL",
+        "bbox": [
+          55.0,
+          523.0,
+          254.0,
+          560.0
+        ],
+        "score": 0.9993192479014397
+      },
+      {
+        "id": 7,
+        "text": "12.00",
+        "bbox": [
+          385.0,
+          520.0,
+          488.0,
+          562.0
+        ],
+        "score": 0.9999537467956543
+      },
+      {
+        "id": 8,
+        "text": "TOTAL",
+        "bbox": [
+          51.0,
+          614.0,
+          178.0,
+          655.0
+        ],
+        "score": 0.9995925664901734
+      },
+      {
+        "id": 9,
+        "text": "12.00",
+        "bbox": [
+          362.0,
+          615.0,
+          462.0,
+          654.0
+        ],
+        "score": 0.9999568462371826
+      },
+      {
+        "id": 10,
+        "text": "CASH",
+        "bbox": [
+          54.0,
+          710.0,
+          165.0,
+          748.0
+        ],
+        "score": 0.9997605979442596
+      },
+      {
+        "id": 11,
+        "text": "20.00",
+        "bbox": [
+          357.0,
+          710.0,
+          460.0,
+          748.0
+        ],
+        "score": 0.9999561548233032
+      },
+      {
+        "id": 12,
+        "text": "CHANGE",
+        "bbox": [
+          55.0,
+          805.0,
+          220.0,
+          842.0
+        ],
+        "score": 0.9991790552934011
+      },
+      {
+        "id": 13,
+        "text": "8.00",
+        "bbox": [
+          405.0,
+          803.0,
+          487.0,
+          843.0
+        ],
+        "score": 0.9999396204948425
+      },
+      {
+        "id": 14,
+        "text": "SYNTHETICDEMO-NOTAREALRECEIPT",
+        "bbox": [
+          57.0,
+          901.0,
+          823.0,
+          934.0
+        ],
+        "score": 0.995028999345056
+      }
+    ],
+    "issues": [
+      {
+        "field": "company",
+        "code": "heuristic_company",
+        "message": "商家来自顶部文字规则，需要人工确认"
+      },
+      {
+        "field": "address",
+        "code": "heuristic_address",
+        "message": "地址来自关键词规则，可能漏掉续行"
+      }
+    ],
+    "image": {
+      "width": 900,
+      "height": 1080
+    },
+    "extractor": "rules-v1",
+    "ocr": "rapidocr-onnxruntime/1.4.4;CPU",
+    "elapsed_seconds": 2.5759
+  }
+}
